@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractBaseUser
+
 # Create your models here.
 class Tag(models.Model):
     type = models.CharField(max_length=40)
@@ -12,5 +13,6 @@ class Entry(models.Model):
     def __str__(self):
         return "{}...".format(self.text[:20])
 
-class Author(AbstractUser):
+class Author(AbstractBaseUser):
+    USERNAME_FIELD = models.CharField(max_length=40)
     phone = models.CharField(max_length=12, help_text="Format should be: 650-111-2222")
