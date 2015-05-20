@@ -1,7 +1,5 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from advanced_tactics import urls as at_urls
-from blog import urls as blog_urls
 
 urlpatterns = [
     # Examples:
@@ -9,7 +7,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^advanced_tactics/', include(at_urls)),
-    url(r'^blog/', include(blog_urls))
-
+    url(r'^advanced_tactics/', include('advanced_tactics.urls')),
+    url(r'^blog/', include('blog.urls')),
+    url(r'^api/blog/', include('blog_drf.api.urls')),
 ]
