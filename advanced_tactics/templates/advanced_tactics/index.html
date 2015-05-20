@@ -1,0 +1,52 @@
+{% extends 'advanced_tactics/base.html' %}
+
+{% block content %}
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"> {{ user }}</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="#">Hobbies</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Welcome to the Rock</h1>
+            <p class="lead">Hey Everybody</p>
+              {% include "advanced_tactics/ad.html" with person="Jane" greeting="Hi" %}
+            <p class="lead">
+                <form style="background-color:#333333;" method="post" action="">
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                    <button type="submit" class="btn btn-lg btn-default">Submit</button>
+                </form>
+
+            </p>
+
+          </div>
+
+{#          <div class="mastfoot">#}
+{#            <div class="inner">#}
+{#            </div>#}
+{#          </div>#}
+
+        </div>
+
+      </div>
+
+    </div>
+
+{% endblock content %}
+
+
