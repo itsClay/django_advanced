@@ -13,7 +13,3 @@ class Entry(models.Model):
     def __str__(self):
         return "{}...".format(self.text[:20])
 
-class Author(AbstractBaseUser):
-    email = models.CharField(max_length=60, unique=True)
-    USERNAME_FIELD = 'email'
-    phone = models.CharField(max_length=12, help_text="Format should be: 650-111-2222")
