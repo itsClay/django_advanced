@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^$', 'blog.views.home', name='home'),
     url(r'^register/$', 'blog.views.register', name='register'),
     url(r'^login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/home'}, name='logged_out'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': 'blog/home'}, name='logged_out'),
     url(r'^profile/$', 'blog.views.profile', name='profile'),
 
     url(r'^password_reset/$', 'django.contrib.auth.views.password_reset', name='password_reset'),

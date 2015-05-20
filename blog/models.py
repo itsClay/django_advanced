@@ -11,3 +11,6 @@ class Entry(models.Model):
 
     def __str__(self):
         return "{}...".format(self.text[:20])
+
+class Author(AbstractUser):
+    phone = models.CharField(max_length=12, help_text="Format should be: 650-111-2222")

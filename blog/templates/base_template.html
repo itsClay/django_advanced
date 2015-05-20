@@ -8,9 +8,12 @@
     <body>
         {% if user.is_authenticated %}
             <h1>hello, {{ user }}</h1>
+            <a href="{% url 'logged_out' %}">logout</a>
         {% else %}
             <h1>Go log in</h1>
             <a href="{% url 'login' %}">Login</a>
         {% endif %}
+
+
     </body>
 </html>
