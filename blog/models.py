@@ -14,5 +14,6 @@ class Entry(models.Model):
         return "{}...".format(self.text[:20])
 
 class Author(AbstractBaseUser):
-    USERNAME_FIELD = models.CharField(max_length=40)
+    email = models.CharField(max_length=60, unique=True)
+    USERNAME_FIELD = 'email'
     phone = models.CharField(max_length=12, help_text="Format should be: 650-111-2222")
