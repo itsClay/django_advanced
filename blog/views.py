@@ -22,3 +22,5 @@ def register(request):
 
     return render(request, "registration/register.html", {'form': form})
 
+def angular(request):
+    return render(request, 'angular/angular.html', {})

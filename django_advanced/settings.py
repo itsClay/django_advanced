@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'advanced_tactics',
     'blog',
     'rest_framework',
+    'blog_drf',
 )
 
 MIDDLEWARE_CLASSES = (

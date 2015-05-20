@@ -10,4 +10,7 @@ urlpatterns = [
     url(r'^advanced_tactics/', include('advanced_tactics.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^api/blog/', include('blog_drf.api.urls')),
+
+     # Route to Angular
+    url(r'^angular-blog/$', 'blog.views.angular', name='angular'),
 ]

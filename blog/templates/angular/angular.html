@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src = {% static 'blog/js/angular.js'%}></script>
+</head>
+<body ng-app="angularApp">
+
+    <div ng-view>
+    <!-- Angular -->
+    <script>{% static 'blog/js/angular.js' %}</script>
+    <script>{% static 'blog/js/controllers/newController.js'%}</script>
+
+        <!-- Everything else -->
+        
+    </div>
+
+</body>
+</html>
